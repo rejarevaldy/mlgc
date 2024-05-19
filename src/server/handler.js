@@ -1,8 +1,6 @@
 import predictClassification from '../services/inferenceService.js';
 import crypto from 'crypto';
-import storeData from '../services/storeData.js';
-import getData from '../services/getData.js';
-
+import { storeData, predictionsCollection } from '../services/dataService.js';
 
 async function postPredict(request, h) {
   const { image } = request.payload;
@@ -37,12 +35,12 @@ async function postPredict(request, h) {
 }
 
 async function getPredictHistories(request, h) {
-  const histories = (await getData.get()).docs.map((doc) => doc.data());
+  const histories = (await predictionsCollection.get()).docs.map((doc) => doc.data());
   const data = histories.map((item) => ({
     id: item.id,
     history: item,
   }));
-  return h.response({ status: 'success', data }).code(200);
-}
+  return h.response({ status: "success", data }).code(200);
+};
 
 export default { postPredict, getPredictHistories };
