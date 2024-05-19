@@ -14,7 +14,6 @@
     "@google-cloud/firestore": "^7.7.0",
     "@hapi/hapi": "^21.3.9",
     "@tensorflow/tfjs-node": "^4.14.0",
-    "nanoid": "^3.1.23",
     "dotenv": "^16.4.5"
   },
   "devDependencies": {
