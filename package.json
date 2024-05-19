@@ -1,0 +1,23 @@
+{
+  "name": "submissionmlgc-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "nodemon ./src/server/server.js",
+    "start": "node ./src/server/server.js"
+  },
+  "author": "Reja Revaldy F",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/firestore": "^7.7.0",
+    "@hapi/hapi": "^21.3.9",
+    "@tensorflow/tfjs-node": "^4.14.0",
+    "nanoid": "^3.1.23",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
