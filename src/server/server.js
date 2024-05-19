@@ -1,13 +1,13 @@
-require('dotenv').config();
+import "dotenv/config.js";
 
 import Hapi from '@hapi/hapi';
-import routes from '../server/routes';
-import { loadModel } from '../services/loadModel';
-import { InputError } from '../exceptions/InputError';
+import routes from './routes.js';
+import { loadModel } from '../services/loadModel.js';
+import { InputError } from '../exceptions/InputError.js';
 
 (async () => {
   const server = Hapi.server({
-    port: 8000,
+    port: 8080,
     host: '0.0.0.0',
     routes: {
       cors: {

@@ -1,21 +1,21 @@
-import postPredict from '../server/handler';
-import getPredictHistories from '../server/handler';
+import handlers from '../server/handler.js';
 
 const routes = [
   {
     path: '/predict',
     method: 'POST',
-    handler: postPredict,
+    handler: handlers.postPredict,
     options: {
       payload: {
         allow: 'multipart/form-data',
         multipart: true,
       },
     },
-
+  },
+  {
     path: '/predict/histories',
     method: 'GET',
-    handler: getPredictHistories,
+    handler: handlers.getPredictHistories,
   },
 ];
 

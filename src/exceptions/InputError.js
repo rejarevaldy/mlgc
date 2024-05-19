@@ -1,4 +1,4 @@
-import ClientError from './ClientError';
+import ClientError from './ClientError.js';
 
 class InputError extends ClientError {
   constructor(message) {
@@ -7,4 +7,4 @@ class InputError extends ClientError {
   }
 }
 
-export default InputError;
+export { InputError }; 

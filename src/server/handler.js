@@ -1,7 +1,8 @@
-import predictClassification from '../services/inferenceService';
+import predictClassification from '../services/inferenceService.js';
 import crypto from 'crypto';
-import storeData from '../services/storeData';
-import getData from '../services/getData';
+import storeData from '../services/storeData.js';
+import getData from '../services/getData.js';
+
 
 async function postPredict(request, h) {
   const { image } = request.payload;

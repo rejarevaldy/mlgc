@@ -1,5 +1,5 @@
+import { InputError } from '../exceptions/InputError.js';
 import tf from '@tensorflow/tfjs-node';
-import { InputError } from '../exceptions/InputError';
 
 async function predictClassification(model, image) {
   try {
