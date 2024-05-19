@@ -44,4 +44,4 @@ async function getPredictHistories(request, h) {
   return h.response({ status: 'success', data }).code(200);
 }
 
-(module.exports = postPredict), getPredictHistories;
+export default { postPredict, getPredictHistories };
