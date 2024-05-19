@@ -1,7 +1,7 @@
-const predictClassification = require('../services/inferenceService');
-const crypto = require('crypto');
-const storeData = require('../services/storeData');
-const getData = require('../services/getData');
+import predictClassification from '../services/inferenceService';
+import crypto from 'crypto';
+import storeData from '../services/storeData';
+import getData from '../services/getData';
 
 async function postPredict(request, h) {
   const { image } = request.payload;

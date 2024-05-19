@@ -1,5 +1,5 @@
-const postPredict = require('../server/handler');
-const getPredictHistories = require('../server/handler');
+import postPredict from '../server/handler';
+import getPredictHistories from '../server/handler';
 
 const routes = [
   {
